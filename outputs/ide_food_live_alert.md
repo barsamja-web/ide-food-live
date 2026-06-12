@@ -1,6 +1,6 @@
 # IDE-food Live Alert
 
-**Generated at:** 2026-06-12 14:36:59 UTC  
+**Generated at:** 2026-06-12 14:46:19 UTC  
 **Data date:** 2026-05-31  
 **Status:** `EARLY_AGROENERGY_WATCH`  
 **Transition:** `PERSISTENT_2_MONTHS`  
