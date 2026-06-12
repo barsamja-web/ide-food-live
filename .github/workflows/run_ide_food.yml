@@ -1,0 +1,38 @@
+name: Run IDE-food Live Monitor
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 8 5 * *"
+
+permissions:
+  contents: write
+
+jobs:
+  run-monitor:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Run IDE-food monitor
+        run: |
+          python ide_food_live.py
+
+      - name: Commit outputs
+        run: |
+          git config --global user.name "ide-food-bot"
+          git config --global user.email "ide-food-bot@users.noreply.github.com"
+          git add outputs/
+          git commit -m "Update IDE-food live signal" || echo "No changes to commit"
+          git push
