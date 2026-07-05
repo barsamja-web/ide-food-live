@@ -1,44 +1,44 @@
 # IDE-food Live Alert
 
-**Generated at:** 2026-06-21 13:35:33 UTC  
-**Data date:** 2026-05-31  
-**Status:** `EARLY_AGROENERGY_WATCH`  
-**Transition:** `PERSISTENT_2_MONTHS`  
-**IDE_core:** `3.224`
+**Generated at:** 2026-07-05 12:49:35 UTC  
+**Data date:** 2026-06-30  
+**Status:** `GREEN`  
+**Transition:** `NO_ACTIVE_ALERT`  
+**IDE_core:** `2.555`
 
 ## Component scores
 
 | Component | Score | Regime |
 |---|---:|---|
-| Energy | 3.772 | RED |
-| Agriculture | 1.940 | GREEN |
-| Fertilizers | 3.626 | RED |
+| Energy | 2.898 | GREEN |
+| Agriculture | 2.082 | GREEN |
+| Fertilizers | 2.617 | GREEN |
 
 ## Ablation pair scores
 
 | Ablation | Score |
 |---|---:|
-| No Energy | 2.887 |
-| No Agriculture | 3.701 |
-| No Fertilizers | 2.986 |
+| No Energy | 2.368 |
+| No Agriculture | 2.758 |
+| No Fertilizers | 2.521 |
 
 ## Interpretation
 
-IDE-food is in EARLY_AGROENERGY_WATCH. Energy and/or fertilizers are elevated, while agriculture has not fully joined the regime. This may correspond to an early latency configuration rather than a full RED regime.
+IDE-food is GREEN. No current agro-energy regime alert under this specification.
 
 ## Last recorded states
 
 | date                | status                 |   IDE_core |   Energy |   Agriculture |   Fertilizers |
 |:--------------------|:-----------------------|-----------:|---------:|--------------:|--------------:|
-| 2025-06-30 00:00:00 | GREEN                  |      2.454 |    2.12  |         2.117 |         3.071 |
-| 2025-07-31 00:00:00 | GREEN                  |      2.479 |    2.025 |         2.085 |         3.256 |
-| 2025-08-31 00:00:00 | GREEN                  |      2.568 |    1.985 |         2.379 |         3.291 |
-| 2025-09-30 00:00:00 | GREEN                  |      2.488 |    2.175 |         2.038 |         3.177 |
-| 2025-10-31 00:00:00 | GREEN                  |      2.168 |    1.96  |         1.688 |         2.816 |
-| 2025-11-30 00:00:00 | GREEN                  |      2.17  |    1.969 |         1.557 |         2.937 |
-| 2025-12-31 00:00:00 | GREEN                  |      1.934 |    1.915 |         1.149 |         2.746 |
-| 2026-01-31 00:00:00 | GREEN                  |      1.932 |    2.038 |         1.084 |         2.692 |
-| 2026-02-28 00:00:00 | GREEN                  |      1.886 |    2.151 |         0.917 |         2.659 |
-| 2026-03-31 00:00:00 | GREEN                  |      2.857 |    3.403 |         1.412 |         3.518 |
-| 2026-04-30 00:00:00 | EARLY_AGROENERGY_WATCH |      3.288 |    3.904 |         1.662 |         3.836 |
-| 2026-05-31 00:00:00 | EARLY_AGROENERGY_WATCH |      3.224 |    3.772 |         1.94  |         3.626 |
+| 2025-07-31 00:00:00 | GREEN                  |      2.48  |    2.026 |         2.085 |         3.256 |
+| 2025-08-31 00:00:00 | GREEN                  |      2.569 |    1.987 |         2.379 |         3.292 |
+| 2025-09-30 00:00:00 | GREEN                  |      2.491 |    2.175 |         2.045 |         3.178 |
+| 2025-10-31 00:00:00 | GREEN                  |      2.169 |    1.96  |         1.69  |         2.817 |
+| 2025-11-30 00:00:00 | GREEN                  |      2.171 |    1.971 |         1.558 |         2.937 |
+| 2025-12-31 00:00:00 | GREEN                  |      1.932 |    1.915 |         1.144 |         2.747 |
+| 2026-01-31 00:00:00 | GREEN                  |      1.932 |    2.037 |         1.084 |         2.693 |
+| 2026-02-28 00:00:00 | GREEN                  |      1.884 |    2.149 |         0.915 |         2.66  |
+| 2026-03-31 00:00:00 | GREEN                  |      2.856 |    3.401 |         1.41  |         3.518 |
+| 2026-04-30 00:00:00 | EARLY_AGROENERGY_WATCH |      3.288 |    3.904 |         1.663 |         3.837 |
+| 2026-05-31 00:00:00 | EARLY_AGROENERGY_WATCH |      3.218 |    3.77  |         1.925 |         3.626 |
+| 2026-06-30 00:00:00 | GREEN                  |      2.555 |    2.898 |         2.082 |         2.617 |
