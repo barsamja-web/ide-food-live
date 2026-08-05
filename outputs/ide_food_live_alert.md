@@ -1,26 +1,26 @@
 # IDE-food Live Alert
 
-**Generated at:** 2026-07-13 09:35:37 UTC  
-**Data date:** 2026-06-30  
+**Generated at:** 2026-08-05 15:50:46 UTC  
+**Data date:** 2026-07-31  
 **Status:** `GREEN`  
 **Transition:** `NO_ACTIVE_ALERT`  
-**IDE_core:** `2.555`
+**IDE_core:** `2.566`
 
 ## Component scores
 
 | Component | Score | Regime |
 |---|---:|---|
-| Energy | 2.898 | GREEN |
-| Agriculture | 2.082 | GREEN |
-| Fertilizers | 2.617 | GREEN |
+| Energy | 2.866 | GREEN |
+| Agriculture | 2.650 | GREEN |
+| Fertilizers | 2.192 | GREEN |
 
 ## Ablation pair scores
 
 | Ablation | Score |
 |---|---:|
-| No Energy | 2.368 |
-| No Agriculture | 2.758 |
-| No Fertilizers | 2.521 |
+| No Energy | 2.403 |
+| No Agriculture | 2.530 |
+| No Fertilizers | 2.767 |
 
 ## Interpretation
 
@@ -30,7 +30,6 @@ IDE-food is GREEN. No current agro-energy regime alert under this specification.
 
 | date                | status                 |   IDE_core |   Energy |   Agriculture |   Fertilizers |
 |:--------------------|:-----------------------|-----------:|---------:|--------------:|--------------:|
-| 2025-07-31 00:00:00 | GREEN                  |      2.48  |    2.026 |         2.085 |         3.256 |
 | 2025-08-31 00:00:00 | GREEN                  |      2.569 |    1.987 |         2.379 |         3.292 |
 | 2025-09-30 00:00:00 | GREEN                  |      2.491 |    2.175 |         2.045 |         3.178 |
 | 2025-10-31 00:00:00 | GREEN                  |      2.169 |    1.96  |         1.69  |         2.817 |
@@ -41,4 +40,5 @@ IDE-food is GREEN. No current agro-energy regime alert under this specification.
 | 2026-03-31 00:00:00 | GREEN                  |      2.856 |    3.401 |         1.41  |         3.518 |
 | 2026-04-30 00:00:00 | EARLY_AGROENERGY_WATCH |      3.288 |    3.904 |         1.663 |         3.837 |
 | 2026-05-31 00:00:00 | EARLY_AGROENERGY_WATCH |      3.218 |    3.77  |         1.925 |         3.626 |
-| 2026-06-30 00:00:00 | GREEN                  |      2.555 |    2.898 |         2.082 |         2.617 |
+| 2026-06-30 00:00:00 | GREEN                  |      2.547 |    2.895 |         2.059 |         2.617 |
+| 2026-07-31 00:00:00 | GREEN                  |      2.566 |    2.866 |         2.65  |         2.192 |
