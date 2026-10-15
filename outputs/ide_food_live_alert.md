@@ -1,6 +1,6 @@
 # IDE-food Live Alert
 
-**Generated at:** 2026-10-05 16:40:56 UTC  
+**Generated at:** 2026-10-15 17:45:44 UTC  
 **Data date:** 2026-09-30  
 **Status:** `WATCH`  
 **Transition:** `NEW_ACTIVE_SIGNAL`  
