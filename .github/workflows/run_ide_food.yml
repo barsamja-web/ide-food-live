@@ -26,6 +26,10 @@ jobs:
         run: |
           python -m pip install -r requirements.txt
 
+      - name: Verify Python syntax
+        run: |
+          python -m py_compile ide_food_live.py
+
       - name: Download World Bank monthly Excel (curl)
         shell: bash
         run: |
