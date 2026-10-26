@@ -1,7 +1,8 @@
 # IDE-food Live Alert
 
-**Generated at:** 2026-10-18 13:14:53 UTC  
+**Generated at:** 2026-10-26 09:52:28 UTC  
 **Data date:** 2026-09-30  
+**Data health:** `DATA_CURRENT` (26 days since observation month-end)  
 **Status:** `WATCH`  
 **Transition:** `NEW_ACTIVE_SIGNAL`  
 **IDE_core:** `3.092`
@@ -25,6 +26,12 @@
 ## Interpretation
 
 IDE-food is in WATCH. Stress is elevated but below the RED threshold.
+
+## Data provenance
+
+Source: World Bank Commodity Markets Pink Sheet, monthly historical indices.  
+Source URL: https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Historical-Data-Monthly.xlsx  
+Data health indicates observation age, not whether the upstream publisher revised earlier values.
 
 ## Last recorded states
 
