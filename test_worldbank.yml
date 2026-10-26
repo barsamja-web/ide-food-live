@@ -1,0 +1,26 @@
+
+name: Test World Bank Connection
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test-connection:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Test World Bank Excel download
+        run: |
+          echo "Testing World Bank connection..."
+
+          curl -L -sS \
+            -o /tmp/worldbank.xlsx \
+            -w 'HTTP status: %{http_code}\n' \
+            --max-time 45 \
+            'https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Historical-Data-Monthly.xlsx'
+
+          echo "Checking downloaded file..."
+          file /tmp/worldbank.xlsx
+
+          echo "File size:"
+          ls -lh /tmp/worldbank.xlsx
