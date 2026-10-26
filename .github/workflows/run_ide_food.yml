@@ -11,6 +11,7 @@ permissions:
 jobs:
   run-monitor:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
 
     steps:
       - name: Checkout repository
@@ -23,16 +24,52 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install -r requirements.txt
+          python -m pip install -r requirements.txt
+
+      - name: Download World Bank monthly Excel (curl)
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p data
+          curl --fail --location --show-error --silent \
+            --retry 3 --retry-delay 3 --retry-all-errors \
+            --connect-timeout 15 --max-time 90 \
+            --output data/worldbank_monthly.xlsx \
+            "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Historical-Data-Monthly.xlsx"
+          file data/worldbank_monthly.xlsx
+          ls -lh data/worldbank_monthly.xlsx
+
+      - name: Validate downloaded workbook
+        run: |
+          python - <<'PYCODE'
+          from pathlib import Path
+          from zipfile import is_zipfile
+          import pandas as pd
+
+          path = Path('data/worldbank_monthly.xlsx')
+          if not path.is_file() or path.stat().st_size < 10000 or not is_zipfile(path):
+              raise SystemExit('ERROR: Downloaded file is absent, too small or not XLSX')
+          workbook = pd.ExcelFile(path, engine='openpyxl')
+          if 'Monthly Indices' not in workbook.sheet_names:
+              raise SystemExit(f'ERROR: Monthly Indices missing; found: {workbook.sheet_names}')
+          print('Validated workbook:', path, 'size:', path.stat().st_size)
+          PYCODE
 
       - name: Run IDE-food monitor
+        env:
+          WB_LOCAL_XLSX: data/worldbank_monthly.xlsx
         run: |
           python ide_food_live.py
 
       - name: Commit outputs
         run: |
-          git config --global user.name "ide-food-bot"
-          git config --global user.email "ide-food-bot@users.noreply.github.com"
+          set -euo pipefail
+          git config user.name "ide-food-bot"
+          git config user.email "ide-food-bot@users.noreply.github.com"
           git add outputs/
-          git commit -m "Update IDE-food live signal" || echo "No changes to commit"
-          git push
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update IDE-food live signal"
+            git push
+          fi
