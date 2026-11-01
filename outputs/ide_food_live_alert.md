@@ -1,8 +1,8 @@
 # IDE-food Live Alert
 
-**Generated at:** 2026-10-26 09:52:28 UTC  
+**Generated at:** 2026-11-01 17:20:33 UTC  
 **Data date:** 2026-09-30  
-**Data health:** `DATA_CURRENT` (26 days since observation month-end)  
+**Data health:** `DATA_CURRENT` (32 days since observation month-end)  
 **Status:** `WATCH`  
 **Transition:** `NEW_ACTIVE_SIGNAL`  
 **IDE_core:** `3.092`
