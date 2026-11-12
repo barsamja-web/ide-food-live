@@ -65,6 +65,12 @@ jobs:
         run: |
           python ide_food_live.py
 
+      - name: Generate citizen-friendly report (independent from core model)
+        continue-on-error: true
+        run: |
+          rm -f outputs/ide_food_informe_ciudadano.md
+          python ide_food_citizen.py
+
       - name: Commit outputs
         run: |
           set -euo pipefail
